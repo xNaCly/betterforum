@@ -29,4 +29,4 @@ node index.js
 ```
 
 ## Todo:
-<img src="https://better-issues.herokuapp.com/render_issue?issue=https://github.com/xNaCly/betterforum/issues/1&type=compact"/>
+<img src="https://better-issues.herokuapp.com/render_issue?issue=https://github.com/xNaCly/betterforum/issues/1/>
