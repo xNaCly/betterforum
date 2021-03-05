@@ -4,6 +4,7 @@ export interface CommentModel {
     author?: string;
     title: string;
     content: string;
+    comments: [];
     image?: string;
 }
 export declare const CommentSchema: {
@@ -11,6 +12,7 @@ export declare const CommentSchema: {
     thread_id: StringConstructor;
     $author: StringConstructor;
     title: StringConstructor;
+    comments: ObjectConstructor[];
     content: StringConstructor;
     $image: StringConstructor;
 };

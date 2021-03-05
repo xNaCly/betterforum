@@ -8,7 +8,10 @@ import db from "./../../index";
 const router = Router();
 
 router.post("/", check(ThreadCreateSchema), async (req: Request, res: Response) => {
-	const AuthorName = await bcrypt.hash(req.body.author, salt);
+	let AuthorName;
+	if (req.body.author) {
+		AuthorName = await bcrypt.hash(req.body.author, salt);
+	}
 
 	let thread: ThreadModel = {
 		...req.body,
