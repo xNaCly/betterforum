@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 const Top = ({ text }) => {
 	return (
 		<div className="navbar_container">
@@ -13,20 +14,8 @@ const Top = ({ text }) => {
 							/home
 						</Link>
 					) : (
-						<Link className="Link" to="/createThread">
-							/createThread
-						</Link>
+						""
 					)}
-
-					{/* <Link
-						className="Link"
-						to={
-							window.location.pathname === "/"
-								? "/createThread"
-								: `/thread/${window.location.pathname.split("/thread/")[1]}/createComment`
-						}>
-						{window.location.pathname === "/" ? "/createThread" : "/createComment"}
-					</Link> */}
 				</div>
 			</div>
 		</div>

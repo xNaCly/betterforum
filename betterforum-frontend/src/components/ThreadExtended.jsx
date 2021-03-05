@@ -51,12 +51,14 @@ function ThreadExtended() {
 				<button className="default_button" onClick={() => setFlag(!replyMenuToggled)}>
 					Reply
 				</button>
+				{/*
 				<button
 					className="default_button"
 					onClick={() => alert("[object Object]\n_.'c²JîÂkTÿÁlSÿÂlTÿÁlSÿÂlTÿÁlSÿÁlSÿÁkSÿÁkSÿÁkSÿ ]O")}>
 					Report
-					{/* //*  fuck reports i aint giving a shit */}
-				</button>
+					//* fuck reports i aint giving a shit
+					</button>
+				*/}
 			</div>
 			<hr id="seperator_thread_comments" />
 			{replyMenuToggled && <AddComment threadId={id}></AddComment>}

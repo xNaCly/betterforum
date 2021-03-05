@@ -1,14 +1,18 @@
 import { Router, Request, Response } from "express";
 import { HTTPError, check } from "lambert-server";
+import { salt } from "./../../config.json";
+import bcrypt from "bcrypt";
 import { ThreadSchema, ThreadModel, ThreadCreateSchema } from "../../models/Thread";
 import db from "./../../index";
 
 const router = Router();
 
 router.post("/", check(ThreadCreateSchema), async (req: Request, res: Response) => {
+	const AuthorName = await bcrypt.hash(req.body.author, salt);
+
 	let thread: ThreadModel = {
 		...req.body,
-		author: req.body.author ?? "Anonymous#" + Math.random().toString(36).substring(2, 6),
+		author: AuthorName ?? "Anonymous#" + Math.random().toString(36).substring(2, 6),
 		image: req.body.image,
 		comments: [],
 		createdAt: Date.now(),

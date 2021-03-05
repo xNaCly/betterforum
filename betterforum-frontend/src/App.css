@@ -151,9 +151,34 @@ hr {
 	margin-top: 1rem;
 }
 .default_button {
+	text-decoration: underline;
+	font-style: italic;
 	background: none;
+	padding: 0;
+	margin-left: 0.5rem;
 	border: none;
 }
 .input_ {
 	width: 25%;
+	padding: 0.25rem;
+	margin-bottom: 0.25rem;
+	resize: vertical;
+}
+.input__ {
+	margin-bottom: 0.25rem;
+	width: 100%;
+	padding: 0.5rem;
+	resize: vertical;
+}
+.createThread_container {
+	margin: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 70%;
+}
+.new_thread_button {
+	max-width: max-content;
+	margin: 1rem;
 }

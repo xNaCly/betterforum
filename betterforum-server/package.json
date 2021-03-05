@@ -10,11 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "lambert-db": "^1.1.9",
     "lambert-server": "^1.1.4"
   },
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.11",
     "@types/node": "^14.14.31"
   }

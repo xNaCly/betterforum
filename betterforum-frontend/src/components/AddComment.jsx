@@ -22,7 +22,7 @@ function AddComment({ threadId }) {
 		<>
 			<input className="input_" placeholder="username" onChange={(E) => setUsername(E.target.value)}></input>
 			<input className="input_" placeholder="*title" onChange={(E) => setTitle(E.target.value)}></input>
-			<input className="input_" placeholder="*content" onChange={(E) => setContent(E.target.value)}></input>
+			<textarea className="input_" placeholder="*content" onChange={(E) => setContent(E.target.value)}></textarea>
 			<button className="default_button" onClick={createComment}>
 				Submit
 			</button>
