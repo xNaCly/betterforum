@@ -1,7 +1,12 @@
 # Betterforum
 
+## Showcase:
+
+
 ## About:
 Betterforums is a simple and easy to understand alternative to conventional social media by focussing on the anonymous aspect of online communication.
+
+It is designed to be selfhosted, see [SETUP](https://github.com/xNaCly/betterforum/blob/master/SETUP.md) for a guide
 
 It is built around the idea of text-based communication and only supports inline link highlighting, rendering of images or links is not intended.
 
