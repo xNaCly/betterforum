@@ -3,14 +3,7 @@ import Thread from "./ThreadCompact";
 
 function Threads({ threads }) {
 	threads = threads.sort((a, b) => b.createdAt - a.createdAt);
-	if (!threads.length)
-		return (
-			<>
-				<Link to="/createThread" className="Link">
-					No Threads found, create one
-				</Link>
-			</>
-		);
+	if (!threads.length) return <>no threads yet</>;
 	return (
 		<div className="thread_div">
 			{threads.map((element) => {
