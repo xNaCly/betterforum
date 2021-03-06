@@ -5,7 +5,6 @@ export interface ThreadModel {
 	id: string;
 	title: string;
 	content: string;
-	image?: string;
 	author?: string;
 	comments: [];
 	createdAt: bigint;
@@ -14,7 +13,6 @@ export const ThreadSchema = {
 	id: String,
 	title: String,
 	content: String,
-	$image: String,
 	$author: String,
 	comments: Array,
 	createdAt: BigInt,
@@ -24,13 +22,11 @@ export const ThreadSchema = {
 export interface ThreadCreateModel {
 	title: string;
 	content: string;
-	image?: string;
 	author?: string;
 }
 export const ThreadCreateSchema = {
 	title: String,
 	content: String,
-	$image: String,
 	$author: String,
 };
 
@@ -38,10 +34,8 @@ export const ThreadCreateSchema = {
 export interface ThreadUpdateModel {
 	title?: string;
 	content?: string;
-	image?: string;
 }
 export const ThreadUpdateSchema = {
 	$title: String,
 	$content: String,
-	$image: String,
 };

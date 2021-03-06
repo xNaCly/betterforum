@@ -5,7 +5,6 @@ export interface CommentModel {
 	title: string;
 	content: string;
 	comments: [];
-	image?: string; //! url --> image
 }
 export const CommentSchema = {
 	id: String,
@@ -14,7 +13,6 @@ export const CommentSchema = {
 	title: String,
 	comments: [Object],
 	content: String,
-	$image: String, //! url --> image
 };
 export interface CommentCreateModel {
 	title: string;
