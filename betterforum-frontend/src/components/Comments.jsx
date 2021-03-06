@@ -17,7 +17,7 @@ function Comments({ id }) {
 	return (
 		<div className="comment" id="threadExtended">
 			{comments.map((comment) => (
-				<Comment commentData={comment} threadId={id}></Comment>
+				<Comment key={comment.id} commentData={comment} threadId={id}></Comment>
 			))}
 		</div>
 	);

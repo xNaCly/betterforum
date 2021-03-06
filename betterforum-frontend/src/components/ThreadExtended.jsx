@@ -39,7 +39,7 @@ function ThreadExtended() {
 					{"#" + thread.id.slice(0, 6)}
 				</Link>
 				{thread.content.split("\n").map((text) => (
-					<p className="thread_content">
+					<p key={text.slice(0, 6)} className="thread_content">
 						<Linkify>{text}</Linkify>
 					</p>
 				))}
