@@ -101,6 +101,7 @@ a {
 }
 .thread_date {
 	color: gray;
+	word-wrap: anywhere;
 	font-style: italic;
 	font-size: 10pt !important;
 	margin: 0;
