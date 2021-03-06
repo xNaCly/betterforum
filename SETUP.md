@@ -1,4 +1,4 @@
-# Get started localy:
+# Get started locally:
 ```
 git clone https://github.com/xNaCly/betterforum.git
 ```
