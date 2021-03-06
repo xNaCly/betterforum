@@ -12,14 +12,14 @@ Posts can be created easily and contain a title, (main)-content and optional the
 git clone https://github.com/xNaCly/betterforum.git
 ```
 
-### Front-end:
+### [Front-end](https://github.com/xNaCly/betterforum/tree/master/betterforum-frontend):
 ```
 cd betterforum
 cd betterforum-frontend
 npm i
 npm start
 ```
-### Back-end:
+### [Back-end](https://github.com/xNaCly/betterforum/tree/master/betterforum-server):
 ```
 cd betterforum-server
 npm i
@@ -28,4 +28,4 @@ node index.js
 ```
 
 ## Todo:
-<img src="https://better-issues.herokuapp.com/render_issue?issue=https://github.com/xNaCly/betterforum/issues/1">
+<img href="https://github.com/xNaCly/betterforum/issues/1" src="https://better-issues.herokuapp.com/render_issue?issue=https://github.com/xNaCly/betterforum/issues/1">
