@@ -39,5 +39,15 @@ export interface CommentModel {
 
 # Behaviour for provided Thread- & Comment- authors
 
-The provided Author `string` gets be hashed by bcrypt and a custom salt to allow the author to maintain anonymity and simultaneously allow distinguishing other users from the Thread or Comment author.
+The provided Author `string` gets hashed by [bcrypt](https://www.npmjs.com/package/bcrypt) and a custom salt to allow the author to maintain anonymity and simultaneously allow distinguishing other users from the Thread or Comment author.
 
+```ts
+import bcrypt from "bcrypt";
+
+const salt = "$2b$10$iYDxSlsxdjwKCjYFFkgemgVF12"
+
+AuthorName = await bcrypt.hash(req.body.author, salt)
+console.log(AuthorName)
+// $2b$10$VomPDJ9NlRAR9CCBo99XqucuB8ox90Kiwfr0B/syi4le3Oc7xu2z.
+
+```
