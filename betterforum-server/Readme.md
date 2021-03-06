@@ -39,7 +39,7 @@ export interface CommentModel {
 
 # Behaviour for provided Thread- & Comment- authors
 
-The provided Author `string` gets be hashed by bcrypt and a custom salt to allow the author to maintain anonymity and simultaneously allow distinguishing other users from the Thread or Comment author.
+The provided Author `string` gets hashed by bcrypt and a custom salt to allow the author to maintain anonymity and simultaneously allow distinguishing other users from the Thread or Comment author.
 
 ```ts
 import bcrypt from "bcrypt";
