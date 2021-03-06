@@ -86,8 +86,11 @@ a {
 	border-left: 0.25rem solid rgba(128, 128, 128, 0.123);
 	border-top: 0.25rem solid rgba(128, 128, 128, 0.123);
 }
-.inline_comment {
+.inline_comment_div {
 	padding: 1rem;
+}
+.inline_comment {
+	width: 90%;
 }
 .thread_title {
 	font-size: 15pt;

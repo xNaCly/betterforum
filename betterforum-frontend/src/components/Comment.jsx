@@ -12,7 +12,7 @@ const Comment = ({ commentData, threadId, inline = false, parentId = null }) => 
 	const id = commentData.id;
 
 	return (
-		<div className="thread_comment" key={id}>
+		<div className={inline ? "thread_comment inline_comment" : "thread_comment"} key={id}>
 			<Link
 				className="Link"
 				id="comment_href"
@@ -48,7 +48,7 @@ const Comment = ({ commentData, threadId, inline = false, parentId = null }) => 
 				</>
 			)}
 			{comments && (
-				<div className="inline_comment">
+				<div className="inline_comment_div">
 					<hr id="hr" />
 					{comments.map((c) => (
 						<InlineComment key={c.id} commentData={c} threadId={threadId} parentId={id}></InlineComment>
