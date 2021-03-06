@@ -27,5 +27,5 @@ cd dist
 node index.js
 ```
 
-## Todo:
+## [Todo](https://github.com/xNaCly/betterforum/issues/1):
 <img href="https://github.com/xNaCly/betterforum/issues/1" src="https://better-issues.herokuapp.com/render_issue?issue=https://github.com/xNaCly/betterforum/issues/1">
