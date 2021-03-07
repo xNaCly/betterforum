@@ -6,8 +6,8 @@ import ThreadExtended from "./components/ThreadExtended";
 
 // import "./themes/old_school.css";
 // import "./themes/terminal.css";
-import "./themes/default_dark.css";
-// import "./themes/default_light.css";
+// import "./themes/default_dark.css";
+import "./themes/default_light.css";
 
 function App() {
 	return (
