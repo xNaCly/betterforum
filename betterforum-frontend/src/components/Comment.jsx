@@ -6,6 +6,7 @@ import AddComment from "./AddComment";
 
 const Comment = ({ commentData, threadId, inline = false, parentId = null }) => {
 	const [replyMenuToggled, setFlag] = useState(false);
+	const [commentsToggled, setToggle] = useState(false);
 
 	const { author, createdAt, content, title } = commentData;
 	const comments = commentData.comments;
@@ -14,7 +15,7 @@ const Comment = ({ commentData, threadId, inline = false, parentId = null }) => 
 	return (
 		<div className={inline ? "thread_comment inline_comment" : "thread_comment"} key={id}>
 			<Link
-				className="Link"
+				className={inline ? "Link inline_comment_href" : "Link"}
 				id="comment_href"
 				to={
 					parentId
@@ -35,6 +36,9 @@ const Comment = ({ commentData, threadId, inline = false, parentId = null }) => 
 				<p className="thread_date">~{author}</p>
 				<p className="thread_date">{new Date(createdAt).toString()}</p>
 			</div>
+			<button className="default_button" onClick={() => setToggle(!commentsToggled)}>
+				Comments
+			</button>
 			{!inline && (
 				<>
 					<button className="default_button" onClick={() => setFlag(!replyMenuToggled)}>
@@ -47,13 +51,15 @@ const Comment = ({ commentData, threadId, inline = false, parentId = null }) => 
 					)}
 				</>
 			)}
-			{comments && (
+			{comments && commentsToggled ? (
 				<div className="inline_comment_div">
 					<hr id="hr" />
 					{comments.map((c) => (
 						<InlineComment key={c.id} commentData={c} threadId={threadId} parentId={id}></InlineComment>
 					))}
 				</div>
+			) : (
+				""
 			)}
 		</div>
 	);
