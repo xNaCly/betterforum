@@ -1,12 +1,16 @@
 :root {
-	--accent: green /*rgba(128, 128, 128, 0.123)*/;
-	--accent2: lightgreen /*rgba(128, 128, 128, 0.246)*/;
-	--background: black /*white*/;
-	--background2: darkgrey /*white*/;
+	--accent: rgba(128, 128, 128, 0.123);
+	--accent2: rgba(128, 128, 128, 0.246);
+	--background: white;
+	--background2: white;
+	--text-color: black;
+	--text-color2: grey;
+	--font: monospace;
 }
 
 * {
-	font-family: monospace;
+	font-family: var(--font);
+	color: var(--text-color);
 }
 body {
 	background-color: var(--background);
@@ -24,8 +28,8 @@ body {
 	justify-content: center;
 }
 .navbar {
-	border-left: 0.25rem solid var(--accent2);
-	border-top: 0.25rem solid var(--accent2);
+	border-left: 0.25rem solid var(--accent);
+	border-top: 0.25rem solid var(--accent);
 	background-color: var(--background2);
 	width: 80%;
 	height: fit-content;
@@ -49,18 +53,18 @@ body {
 	align-items: center;
 }
 .Link {
-	color: black !important;
+	color: var(--text-color) !important;
 	font-style: unset !important;
 	margin: 1rem;
 	font-style: italic;
 }
 a {
-	color: black !important;
+	color: var(--text-color) !important;
 	font-style: unset !important;
 	font-style: italic;
 }
 #thread_href {
-	background-color: var(--accent2);
+	background-color: var(--accent);
 	margin: 0 !important;
 }
 #comment_href {
@@ -78,22 +82,25 @@ a {
 .thread {
 	background-color: var(--background2);
 	width: 100%;
-	margin-top: 1rem;
-	border-left: 0.25rem solid var(--accent2);
-	border-top: 0.25rem solid var(--accent2);
+	margin-bottom: 1rem;
+	padding-bottom: 0.75rem;
+	border-left: 0.25rem solid var(--accent);
+	border-top: 0.25rem solid var(--accent);
 }
 .thread_comment {
 	background-color: var(--background2);
-	width: 50%;
+	width: 80%;
 	margin-top: 1rem;
+	padding-bottom: 1rem;
 	border-left: 0.25rem solid var(--accent);
 	border-top: 0.25rem solid var(--accent);
 }
 .inline_comment_div {
-	background-color: var(--background);
+	background-color: var(--background2);
 	padding: 1rem;
 }
 .inline_comment {
+	background-color: var(--background);
 	width: 90%;
 }
 .thread_title {
@@ -107,7 +114,7 @@ a {
 	font-weight: 100 !important;
 }
 .thread_date {
-	color: gray;
+	color: var(--text-color2);
 	font-style: italic;
 	font-size: 10pt !important;
 	margin: 0;
@@ -146,11 +153,12 @@ hr {
 }
 #footer_href {
 	margin-left: 1rem;
-	color: black !important;
+	color: var(--text-color2) !important;
 }
 #threadExtended {
-	width: 75% !important;
+	width: 80% !important;
 	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
 .comment {
 	width: 70%;
@@ -165,16 +173,23 @@ hr {
 	font-style: italic;
 	background: none;
 	padding: 0;
-	margin-left: 0.5rem;
+	margin-left: 1rem;
 	border: none;
 }
 .input_ {
+	color: var(--text-color);
+	background-color: var(--background2);
+	border: 1px solid var(--accent);
+
 	width: 25%;
 	padding: 0.25rem;
 	margin-bottom: 0.25rem;
 	resize: vertical;
 }
 .input__ {
+	color: var(--text-color);
+	background-color: var(--background2);
+	border: 1px solid var(--accent);
 	margin-bottom: 0.25rem;
 	width: 100%;
 	padding: 0.5rem;
@@ -193,8 +208,9 @@ hr {
 	margin: 1rem;
 }
 .reply_comment_container {
-	width: 100%;
 	display: flex;
+	width: 90%;
+	margin-right: 1rem;
 	flex-direction: column;
 	padding: 1rem;
 }
@@ -203,7 +219,7 @@ hr {
 	height: 20px;
 	display: inline-block;
 	border: none;
-	border-left: 1px solid var(--accent);
+	border-left: 1px solid var(--accent2);
 	margin-left: 1rem;
 }
 .vrhr_center_items {
