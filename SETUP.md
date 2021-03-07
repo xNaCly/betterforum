@@ -14,6 +14,5 @@ npm start
 ```
 cd betterforum-server
 npm i
-cd dist
-node index.js
+npm start
 ```
