@@ -194,3 +194,16 @@ hr {
 	flex-direction: column;
 	padding: 1rem;
 }
+.vr {
+	width: 1px;
+	height: 20px;
+	display: inline-block;
+	border: none;
+	border-left: 1px solid var(--grey);
+	margin-left: 1rem;
+}
+.vrhr_center_items {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
