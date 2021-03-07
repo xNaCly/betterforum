@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Linkify from "react-linkify";
 
-import Top from "./Top";
+import Top from "./top/Navbar";
 import Comments from "./Comments";
 import AddComment from "./AddComment";
 

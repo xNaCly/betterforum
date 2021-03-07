@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import Top from "./Top";
+import Top from "./top/Navbar";
 import AddThread from "./AddThread";
 import Threads from "./ThreadsOverview";
 
