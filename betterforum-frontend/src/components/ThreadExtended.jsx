@@ -5,6 +5,7 @@ import Linkify from "react-linkify";
 import Top from "./top/Navbar";
 import Comments from "./Comments";
 import AddComment from "./AddComment";
+import TopBar from "./top/TopBar";
 
 function ThreadExtended() {
 	const id = window.location.pathname.split("/thread/")[1].replace("/", "");
@@ -33,6 +34,7 @@ function ThreadExtended() {
 
 	return (
 		<>
+			<TopBar />
 			<Top text={thread.title} />
 			<div className="thread" id="threadExtended">
 				<Link className="Link" id="thread_href" to={window.location.href.split("/thread/")[1]}>

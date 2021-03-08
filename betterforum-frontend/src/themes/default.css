@@ -92,6 +92,11 @@ a {
 .inline_comment {
 	background-color: var(--background);
 	width: 90%;
+	border-left: 0.25rem solid var(--accent2) !important;
+	border-top: 0.25rem solid var(--accent2) !important;
+}
+.inline_comment_href {
+	background-color: var(--accent2) !important;
 }
 .thread_title {
 	font-size: 15pt;
@@ -120,14 +125,14 @@ a {
 }
 hr {
 	border: none !important;
-	border-top: 1px dashed !important;
+	border-top: 1px dashed var(--accent) !important;
 	width: 40%;
 	margin-left: 1rem !important;
 	margin: 0;
 }
 #hr {
 	width: 90%;
-	border-top: 1px dotted !important;
+	border-top: 1px dotted var(--accent) !important;
 }
 #seperator_thread_comments {
 	margin-top: 2rem;
@@ -219,9 +224,15 @@ hr {
 }
 .top_bar_div {
 	display: flex;
-	margin: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	/* justify-content: space-between; */
 }
 .settings {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
@@ -229,4 +240,31 @@ hr {
 	background-color: var(--background2);
 	color: var(--text-color);
 	border: 1px solid var(--accent);
+}
+.Link_top {
+	color: var(--text-color2) !important;
+}
+.Link_top_container_span {
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+}
+.toggle_button {
+	background: none;
+	color: var(--text-color2) !important;
+	margin-left: 0.25rem;
+	padding: 0;
+	border: none;
+}
+.hundred_percent {
+	width: 100%;
+}
+.settings_theme_display_values {
+	background-color: var(--background2);
+	margin-top: 1rem;
+	padding: 0.5rem;
+}
+.settings_theme_display_values > p {
+	margin: 0 !important;
+	margin-bottom: 0.25rem;
+	/* color: black; */
 }

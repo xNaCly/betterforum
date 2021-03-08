@@ -6,7 +6,7 @@
 		"--background2": "white",
 		"--text-color": "black",
 		"--text-color2": "grey",
-		"--font": "sans-serif"
+		"--font": "monospace"
 	},
 	"dark": {
 		"--accent": "#4e4e4e",
@@ -15,11 +15,20 @@
 		"--background2": "#282a2e",
 		"--text-color": "#ffffff",
 		"--text-color2": "#5f89ac",
-		"--font": "sans-serif"
+		"--font": "monospace"
+	},
+	"discord": {
+		"--accent": "rgb(114, 137, 218)",
+		"--accent2": "#8ea1e1",
+		"--background": "#36393f",
+		"--background2": "#2f3136",
+		"--text-color": "#dcddde",
+		"--text-color2": "#72767d",
+		"--font": "Helvetica"
 	},
 	"terminal": {
-		"--accent": "#7e8e50",
-		"--accent2": "#ac4142",
+		"--accent": "#ac4142",
+		"--accent2": "#ff6265",
 		"--background": "#151515",
 		"--background2": "#212121",
 		"--text-color": "#cccccc",

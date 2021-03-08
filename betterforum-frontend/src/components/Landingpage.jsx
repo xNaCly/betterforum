@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Top from "./top/Navbar";
 import AddThread from "./AddThread";
 import Threads from "./ThreadsOverview";
+import TopBar from "./top/TopBar";
 
 const Landingpage = () => {
 	const [threads, setThreads] = useState([]);
@@ -19,6 +20,7 @@ const Landingpage = () => {
 
 	return (
 		<>
+			<TopBar landingpage={true} />
 			<Top text="Landingpage"></Top>
 			<div className="createThread_container">
 				<hr id="hr" />

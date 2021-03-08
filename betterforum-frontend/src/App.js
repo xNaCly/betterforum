@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Landingpage from "./components/Landingpage";
 import Footerr from "./components/Footerr";
 import ThreadExtended from "./components/ThreadExtended";
-import TopBar from "./components/top/TopBar";
+import Setting from "./components/top/Settings";
 
 import themes from "./themes/themes.json";
 import "./themes/default.css";
@@ -27,8 +27,8 @@ function App() {
 
 	return (
 		<Router>
-			<TopBar />
 			<Route path="/" exact component={Landingpage}></Route>
+			<Route path="/settings/" exact component={Setting}></Route>
 			<Route path="/thread/" component={ThreadExtended}></Route>
 			<Footerr />
 		</Router>
