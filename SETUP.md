@@ -8,7 +8,9 @@ git clone https://github.com/xNaCly/betterforum.git
 cd betterforum
 cd betterforum-frontend
 npm i
-npm start
+npm build
+npm i -g serve
+serve -s build
 ```
 ## [Back-end](https://github.com/xNaCly/betterforum/tree/master/betterforum-server):
 ```
