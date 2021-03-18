@@ -4,10 +4,15 @@ import bcrypt from "bcrypt";
 import { salt } from "./../../../../../config.json";
 import db from "./../../../../../index";
 import { CommentCreateSchema, CommentModel } from "./../../../../../models/Comment";
+import { disablePOSTPUT } from "../../../../../flags.json";
 
 const router = Router();
 
 router.post("/", check(CommentCreateSchema), async (req: Request, res: Response) => {
+	if (disablePOSTPUT) {
+		throw new HTTPError("this method is disabled on the showcase REST", 405);
+	}
+
 	const Thread = await db.data.threads({ id: req.params.THREADID }).get({ _id: true });
 	if (!Thread) {
 		throw new HTTPError(`Cant find a Thread with the ID: ${req.params.THREADID}`, 404);

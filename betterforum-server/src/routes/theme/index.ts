@@ -1,6 +1,7 @@
 import { Router, Request, Response } from "express";
 import { HTTPError, check } from "lambert-server";
 import db from "./../../index";
+import { disablePOSTPUT } from "../../flags.json";
 
 const router = Router();
 
@@ -9,6 +10,9 @@ const Theme = {
 };
 
 router.put("/", check(Theme), async (req: Request, res: Response) => {
+	if (disablePOSTPUT) {
+		throw new HTTPError("this method is disabled on the showcase REST", 405);
+	}
 	await db.data.config({}).set({ theme: req.body.theme });
 	res.status(201).send({ status: "set new default theme" });
 });

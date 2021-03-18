@@ -3,6 +3,7 @@ import { MongoDatabase, Database } from "lambert-db";
 const db: Database = new MongoDatabase();
 import fs from "fs";
 import bcrypt from "bcrypt";
+import { disablePOSTPUT } from "./flags.json";
 
 (async () => {
 	try {
@@ -19,6 +20,7 @@ import bcrypt from "bcrypt";
 })();
 
 (async () => {
+	if (disablePOSTPUT) console.warn("!POST PUT requests are disabled in src/flags.json!");
 	await db.init();
 	const server = new Server();
 	await server.registerRoutes(__dirname + "/routes/");

@@ -4,10 +4,15 @@ import { salt } from "./../../config.json";
 import bcrypt from "bcrypt";
 import { ThreadSchema, ThreadModel, ThreadCreateSchema } from "../../models/Thread";
 import db from "./../../index";
+import { disablePOSTPUT } from "../../flags.json";
 
 const router = Router();
 
 router.post("/", check(ThreadCreateSchema), async (req: Request, res: Response) => {
+	if (disablePOSTPUT) {
+		throw new HTTPError("this method is disabled on the showcase REST", 405);
+	}
+
 	let AuthorName;
 	if (req.body.author) {
 		AuthorName = await bcrypt.hash(req.body.author, salt);
