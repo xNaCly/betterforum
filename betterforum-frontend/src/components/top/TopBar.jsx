@@ -1,36 +1,39 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function TopBar({ landingpage = false }) {
+function TopBar({ hideHome = false, hideAdmin = false }) {
 	return (
 		<div className="top_bar_div">
-			<span className="Link_top_container_span">
-				[
-				<Link className="Link_top" to={`/settings/`}>
-					Settings
-				</Link>
-				{/* <Link className="Link_top" to={`/settings/?href=${window.location.href}`}>
+			<div className="top_bar_items_left_container">
+				<span className="Link_top_container_span">
+					[
+					<Link className="Link_top" to={`/settings/`}>
+						Settings
+					</Link>
+					{/* <Link className="Link_top" to={`/settings/?href=${window.location.href}`}>
 					Settings
 				</Link> */}]
-			</span>
-			{!landingpage && (
-				<span className="Link_top_container_span">
-					[
-					<Link className="Link_top" to="/">
-						Home
-					</Link>
-					]
 				</span>
+				{!hideHome && (
+					<span className="Link_top_container_span">
+						[
+						<Link className="Link_top" to="/">
+							Home
+						</Link>
+						]
+					</span>
+				)}
+			</div>
+			{!hideAdmin && (
+				<div>
+					<span className="Link_top_container_span">
+						[
+						<Link className="Link_top" to={`/admin/`}>
+							Admin
+						</Link>
+						]
+					</span>
+				</div>
 			)}
-			{/* {window.location.pathname !== "/" && (
-				<span className="Link_top_container_span">
-					[
-					<Link className="Link_top" to={decodeURIComponent(window.location.search).split("href=")[1]}>
-						Back
-					</Link>
-					]
-				</span>
-			)} */}
 		</div>
 	);
 }

@@ -10,6 +10,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	height: 100%;
 }
 .navbar_container {
 	margin-top: 1rem;
@@ -49,7 +50,7 @@ body {
 	font-style: italic;
 }
 a {
-	color: var(--text-color) !important;
+	color: var(--accent) !important;
 	font-style: unset !important;
 	font-style: italic;
 }
@@ -90,6 +91,7 @@ a {
 	padding: 1rem;
 }
 .inline_comment {
+	margin-left: 2rem;
 	background-color: var(--background);
 	width: 90%;
 	border-left: 0.25rem solid var(--accent2) !important;
@@ -226,7 +228,7 @@ hr {
 	display: flex;
 	margin-bottom: 1rem;
 	width: 100%;
-	/* justify-content: space-between; */
+	justify-content: space-between;
 }
 .settings {
 	display: flex;
@@ -267,4 +269,40 @@ hr {
 	margin: 0 !important;
 	margin-bottom: 0.25rem;
 	/* color: black; */
+}
+.top_bar_items_left_container {
+	display: flex;
+}
+.admin_pannel {
+	width: 100%;
+	height: 100%;
+}
+.side_pannel {
+	background-color: var(--background2);
+	border-right: 1px solid var(--accent);
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	width: 8%;
+	height: 100%;
+}
+.side_pannel > button {
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	margin: 0;
+}
+.right_pannel {
+	display: flex;
+	flex-direction: column;
+	width: 92%;
+	margin-left: 0.5rem;
+	margin-right: 5rem;
+}
+.admin_container {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
 }

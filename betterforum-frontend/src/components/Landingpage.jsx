@@ -20,7 +20,7 @@ const Landingpage = () => {
 
 	return (
 		<>
-			<TopBar landingpage={true} />
+			<TopBar hideHome={true} />
 			<Top text="Landingpage"></Top>
 			<div className="createThread_container">
 				<hr id="hr" />
